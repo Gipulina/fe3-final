@@ -1,4 +1,6 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
+
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
@@ -9,23 +11,18 @@ const Navbar = () => {
       <div>
         <ul>
           <li>
-            <Link rel="/home" className="nav-link">
+            <Link to="/home" className="nav-link">
               Home
               </Link>
           </li>
           <li>
-            <Link rel="/favs" className="nav-link">
+            <Link to="/favs" className="nav-link">
               Favs
               </Link>
           </li>
           <li>
-            <Link rel="/contact" className="nav-link">
+            <Link to="/contact" className="nav-link">
               Contact
-              </Link>
-          </li>
-          <li>
-            <Link rel="/detail" className="nav-link">
-              Detail
               </Link>
           </li>
         </ul>
