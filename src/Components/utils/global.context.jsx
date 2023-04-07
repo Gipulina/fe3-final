@@ -13,31 +13,11 @@ export const GlobalContextProvider = ({ children }) => {
     const getDentists = async () => {
     const res = await fetch("https://jsonplaceholder.typicode.com/users");
     const data = await res.json();
-    console.log(data);
-    setDentist(data)
     };
     useEffect(() => {
       getDentists();
     },[])
-    console.log(dentist);
-  //   };
-  //     try{
-  //       fetch("https://jsonplaceholder.typicode.com/users")
-  //       .then((res) => {
-  //         console.log(res)
-  //         return res.json()
-  //       })
-  //       .then((data) => {
-  //         console.log(data)
-  //         return setDentist(data)
-  //       });
-  //     }catch(error){
-  //       console.error(error);
-  //     }
-  //   };
-  // getDentist();
-  // },[])
-
+  
   return (
     <ContextGlobal.Provider value={{dentist}}>
       {children}

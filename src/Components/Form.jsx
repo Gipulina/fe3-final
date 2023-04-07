@@ -1,31 +1,61 @@
 import React from "react";
 import {useState} from "react";
-
+import '../Stylesheet/Form.css'
 const Form = () => {
-  //Aqui deberan implementar el form completo con sus validaciones
-  const [name, SetName] = useState('');
-  const [email, SetEmail] = useState('');
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [nameError, setNameError] = useState('');
+  const [emailError, setemailError] = useState('');
 
-  const onChangeInput = (event)=>{
-    SetName(event.target.value)
-  }
-  
-  onChangeInput = (event)=>{
-    SetEmail(event.target.value)
-  }
-
-  const validName = (name) =>{
-    return name.length >= 5
-  }
+  const validName = (name) => {
+    if(name.length < 5){
+      setNameError('El nombre debe ser de al menos 5 caracteres');
+    }else{
+      setNameError('');
+    }
+  };
 
   const validEmail = (email) => {
-    const regex = /@/;
-    return regex.test(email);
+    const regex =/^\S+@\S+\.\S+$/;
+    if(!regex.test(email)){
+      setemailError('El correo es incorrecto');
+    }else{
+      setemailError('');
+    }
+  };
+
+  const onSubmit = (event)=> {
+    event.preventDefault();
+  };
+
+  const onChangeName = (event) =>{
+    setName(event.target.value);
+    validName(event.target.value);
+  };
+
+  const onChangeEmail = (event) =>{
+    setEmail(event.target.value);
+    validEmail(event.target.value);
   };
 
   return (
     <div>
-      <form>
+      <form onSubmit={onSubmit}>
+        <div>
+          <label>
+          Nombre:
+          <input type="text" value={name} onChange={onChangeName} />
+          </label>
+          {nameError && <div class ="error">{nameError}</div>}
+        </div>
+        <div>
+          <label>
+          Email:
+          <input type="email" value={email} onChange={onChangeEmail} />
+          </label>
+          {emailError && <div class ="error">{emailError}</div>}
+        </div>
+        <button type="submit">Agendar</button>
       </form>
     </div>
   );
