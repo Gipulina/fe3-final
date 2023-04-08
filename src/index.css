@@ -62,24 +62,34 @@ a:hover{
 
 footer {
   display: flex;
-  justify-content: center;
-  text-align: center;
+  justify-content:space-between;
+  align-items: center;
   padding: 2rem;
   position: relative;
   bottom: 0;
   width: 90%;
   height: 40px;
   margin-top: 2rem;
+  float: right;
+}
+footer .left {
+  display: flex;
+  align-items: center;
 }
 
-footer > img{
-  width: 200px;
-  margin: 0;
+footer .right {
+  display: flex;
+  justify-content: flex-end;
 }
-footer > p{
+
+footer .left img, footer .right img{
+  width: 15%;
   margin: 0;
-  padding-top: 0.7rem;
+  padding: 5px;
+  display: flex;
+  align-items: center;
 }
+
 
 form{
   display: flex;
