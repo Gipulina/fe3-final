@@ -1,7 +1,6 @@
-import React from 'react';
-import {Link} from 'react-router-dom';
-import DarkMode from './darkmode';
-import { useState } from "react";
+import React from "react";
+import { Link } from "react-router-dom";
+import DarkMode from "./darkmode";
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
@@ -13,26 +12,25 @@ const Navbar = () => {
           <li>
             <Link to="/home" className="nav-link">
               Home
-              </Link>
+            </Link>
           </li>
           <li>
             <Link to="/favs" className="nav-link">
               Favs
-              </Link>
+            </Link>
           </li>
           <li>
             <Link to="/contact" className="nav-link">
               Contact
-              </Link>
+            </Link>
           </li>
-          </ul>
           <li>
-            <DarkMode/>
+            <DarkMode />
           </li>
+        </ul>
       </div>
-
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

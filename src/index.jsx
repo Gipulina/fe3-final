@@ -8,6 +8,7 @@ import Contact from './Routes/Contact'
 import Detail from './Routes/Detail'
 import Favs from './Routes/Favs'
 import { GlobalContextProvider }  from './Components/utils/global.context'
+import './Stylesheet/App.css'
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -19,7 +20,6 @@ root.render(
           <Route  path="dentist/:id" element={<Detail />} />
           <Route  path="contact" element={<Contact />} />
           <Route  path="favs" element={<Favs />} />
-          {/* <Route  path="*" element={<Error />} /> */}
         </Routes>
         </GlobalContextProvider>
     </BrowserRouter>
