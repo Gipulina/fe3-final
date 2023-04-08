@@ -4,6 +4,7 @@ import {useContext} from "react";
 import {ContextGlobal} from "../Components/utils/global.context"
 import '../index.css';
 import Navbar from '../Components/Navbar';
+import darkmode from '../Components/darkmode'
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
