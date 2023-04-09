@@ -10,17 +10,18 @@ import Footer from '../Components/Footer';
 
 const Home = () => {
 
-  const {dentist} = useContext(ContextGlobal);
-  console.log(dentist);
+  const {dentists} = useContext(ContextGlobal);
+
+  console.log(dentists);
   return (
     <main>
       <Navbar/>
       <h1>Home</h1>
-        {
-          dentist.map((dentist)=>(
-            <Card {...dentist} dentist={dentist} />
-          ))
-        }
+      {
+      dentists.map((dentist)=>(
+        <Card {...dentist} dentist={dentist} />
+      ))
+      }
       <Footer/>
     </main>
   )
