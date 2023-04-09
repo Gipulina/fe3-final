@@ -16,13 +16,11 @@ const Home = () => {
     <main>
       <Navbar/>
       <h1>Home</h1>
-      <div>
         {
           dentist.map((dentist)=>(
             <Card {...dentist} dentist={dentist} />
           ))
         }
-      </div>
       <Footer/>
     </main>
   )
