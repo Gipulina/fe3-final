@@ -7,7 +7,11 @@ import DarkMode from "./darkmode";
 const Navbar = () => {
   return (
     <nav>
-      <div className="left">Logo</div>
+      <div className="left">
+      <div className='backLink'>
+        <Link to={`/home`} className="nav-link">Back to to Home</Link>
+      </div>
+      </div>
       <div className="right">
         <ul>
           <li>
