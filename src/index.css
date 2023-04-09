@@ -152,3 +152,18 @@ tr:nth-child(even) {
 .dark > a {
   color: white;
 }
+.details{
+  padding-left: 38%;
+  text-align: left;
+  margin-top: 7%;
+}
+.details h3{
+  font-weight: 200;
+  margin-right: 10px;
+}
+@media screen and (max-width: 1059px) { 
+  
+.card{
+  width: 27%;
+}
+}
