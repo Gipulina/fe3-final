@@ -17,7 +17,8 @@ const Card = ({ dentist }) => {
 
   return (
     <div className="card">
-      <div className="card-content">
+      <img src="./images/doctor.jpg" alt='doctor' />
+      <div>
         <h2>{dentist.name}</h2>
         <p>{dentist.email}</p>
         <p>{dentist.phone}</p>
