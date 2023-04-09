@@ -1,6 +1,8 @@
 import { useParams } from 'react-router-dom';
 import {ContextGlobal} from '../Components/utils/global.context';
 import { useContext } from 'react';
+import Navbar from '../Components/Navbar';
+
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 const Detail = () => {
@@ -11,19 +13,24 @@ const Detail = () => {
 
   return (
     <>
-      <h1>Detail Dentist id {currentDentist?.id} - {currentDentist?.name}</h1>
-      {/* aqui deberan renderizar la informacion en detalle de un user en especifico */}
-      {/* Deberan mostrar el name - email - phone - website por cada user en especifico */}
-        {currentDentist && (
-          <div className='details'>
-            <h3> Name     :</h3><h3>{currentDentist.name}</h3>
-            <h3> Email    :</h3><h3>{currentDentist.email}</h3>
-            <h3> Phone    :</h3><h3>{currentDentist.phone}</h3>
-            <h3> Website  :</h3><h3>{currentDentist.website}</h3>
-          </div>
-        )}
+      <Navbar />
+      <h1>
+        Dentist id {currentDentist?.id} - {currentDentist?.name}
+      </h1>
+      {currentDentist && (
+        <div className="details">
+          <h3> Name :</h3>
+          <h2>{currentDentist.name}</h2>
+          <h3> Email :</h3>
+          <h2>{currentDentist.email}</h2>
+          <h3> Phone :</h3>
+          <h2>{currentDentist.phone}</h2>
+          <h3> Website :</h3>
+          <h2>{currentDentist.website}</h2>
+        </div>
+      )}
     </>
-  )
+  );
 }
 
 export default Detail;

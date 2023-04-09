@@ -161,6 +161,9 @@ tr:nth-child(even) {
   font-weight: 200;
   margin-right: 10px;
 }
+.details h2{
+  font-size: 2rem;
+}
 @media screen and (max-width: 1059px) { 
   
 .card{

@@ -8,14 +8,14 @@ const Contact = () => {
   return (
     <div>
       <Navbar></Navbar>
-      <div className= "form-text">
+      <div className="form-text">
         <h2>Want to know more?</h2>
         <p>Send us your questions and we will contact you</p>
       </div>
-      <Form/>
-      <Footer/>
+      <Form />
+      <Footer />
     </div>
-  )
+  );
 }
 
 export default Contact
