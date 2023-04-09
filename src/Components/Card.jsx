@@ -1,6 +1,6 @@
 import React from "react";
-// import { Link } from "react-router-dom";
-import { ContextGlobal } from "./utils/global.context";
+import { Link } from "react-router-dom";
+// import { ContextGlobal } from "./utils/global.context";
 
 const Card = ({ name, username, id }) => {
 
@@ -12,7 +12,9 @@ const Card = ({ name, username, id }) => {
   return (
     <div className="card">
         <img src="../images/doctor.jpg" alt="Doctor"/>
-        <h3>{name}</h3>
+        <Link to={`/detail/${id}`}>
+          <h3>{name}</h3>
+        </Link>
         <h4>{username} </h4>
           {/* En cada card deberan mostrar en name - username y el id */}
           {/* No debes olvidar que la Card a su vez servira como Link hacia la pagina de detalle */}
