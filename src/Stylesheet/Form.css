@@ -32,4 +32,7 @@ button:hover, button:focus {
   background-color: green ;
   color: white;
 }
-  
+
+.form-text{
+  margin-bottom: 100px;
+}

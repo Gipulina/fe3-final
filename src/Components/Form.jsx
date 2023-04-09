@@ -6,6 +6,7 @@ const Form = () => {
   const [email, setEmail] = useState('');
   const [nameError, setNameError] = useState('');
   const [emailError, setemailError] = useState('');
+  const [showMessage, setShowMessage] = useState(false);
 
   const validName = (name) => {
     if(name.length < 5){
@@ -26,6 +27,7 @@ const Form = () => {
 
   const onSubmit = (event)=> {
     event.preventDefault();
+    setShowMessage(true);
   };
 
   const onChangeName = (event) =>{
@@ -37,7 +39,9 @@ const Form = () => {
     setEmail(event.target.value);
     validEmail(event.target.value);
   };
-
+  const message = () => (
+    <div>Muchas gracias {name}, el correo {email} ha quedado registrado.</div>
+  );
   return (
     <div>
       <form onSubmit={onSubmit}>
@@ -55,7 +59,8 @@ const Form = () => {
           </label>
           {emailError && <div class ="error">{emailError}</div>}
         </div>
-        <button type="submit">Agendar</button>
+        <button type="submit" onSubmit={message}>Agendar</button>
+        <div class="error">{showMessage && message()}</div>
       </form>
     </div>
   );
