@@ -8,7 +8,7 @@ const Contact = () => {
   return (
     <div>
       <Navbar></Navbar>
-      <div class= "form-text">
+      <div className= "form-text">
         <h2>Want to know more?</h2>
         <p>Send us your questions and we will contact you</p>
       </div>

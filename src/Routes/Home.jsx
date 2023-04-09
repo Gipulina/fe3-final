@@ -1,8 +1,8 @@
 import React from 'react'
-import Card from '../Components/Card'
 import {useContext} from "react";
 import {ContextGlobal} from "../Components/utils/global.context"
 import '../index.css';
+import Card from '../Components/Card'
 import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
 
@@ -20,7 +20,6 @@ const Home = () => {
         {
           dentist.map((dentist)=>(
             <Card {...dentist} dentist={dentist} />
-            // </div>
           ))
         }
       </div>
@@ -29,4 +28,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Home;

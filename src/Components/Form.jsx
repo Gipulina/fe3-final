@@ -50,17 +50,17 @@ const Form = () => {
           Nombre:
           <input type="text" value={name} onChange={onChangeName} />
           </label>
-          {nameError && <div class ="error">{nameError}</div>}
+          {nameError && <div className ="error">{nameError}</div>}
         </div>
         <div>
           <label>
           Email:
           <input type="email" value={email} onChange={onChangeEmail} />
           </label>
-          {emailError && <div class ="error">{emailError}</div>}
+          {emailError && <div className ="error">{emailError}</div>}
         </div>
         <button type="submit" onSubmit={message}>Agendar</button>
-        <div class="error">{showMessage && message()}</div>
+        <div className="error">{showMessage && message()}</div>
       </form>
     </div>
   );
